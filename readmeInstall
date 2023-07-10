@@ -1,0 +1,30 @@
+install notes
+
+   3  sudo apt-get update
+    4  curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+    5  sudo bash nodesource_setup.sh
+    6  sudo apt install nodejs build-essential
+    7  npm install web3
+    8  npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
+    9  npx hardhat
+   10  npx hardhat init
+   11  npx hardhat fork
+   12  npx hardhat test
+   13  mkdir forkingDemo
+   14  cd forkingDemo/
+   15  npx hardhat
+   16  ls
+   17  npx hardhat node
+   18  npx hardhat node --fork https://cloudflare-eth.com/
+   19  ls
+   20  vi hardhat.config.js
+   21  npx hardhat node
+   22  vi hardhat.config.js
+   23  npx hardhat node
+   24  vi hardhat.config.js
+   25  npx hardhat node --fork https://cloudflare-eth.com/
+   26  ls
+   27  vi hardhat.config.js
+   28  npx hardhat node
+  43  npx hardhat node
+   44  npx hardhat node --hostname    ec2-35-87-164-14.us-west-2.compute.amazonaws.com
