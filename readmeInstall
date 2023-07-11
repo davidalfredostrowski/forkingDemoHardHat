@@ -24,6 +24,158 @@ install notes
    24  vi hardhat.config.js
    25  npx hardhat node --fork https://cloudflare-eth.com/
    26  ls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  3  sudo apt-get update
+    4  curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+    5  sudo bash nodesource_setup.sh
+    6  sudo apt install nodejs build-essential
+    7  npm install web3
+    8  npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
+    9  npx hardhat
+   10  npx hardhat init
+   11  npx hardhat fork
+   12  npx hardhat test
+   13  mkdir forkingDemo
+   14  cd forkingDemo/
+   15  npx hardhat
+   16  ls
+
+
+hardhat.config
+npx hardhat node --fork https:
+
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+        networks: {
+                hardhat: {
+                localhost: {
+                        url: "http://ec2-35-88-12-204.us-west-2.compute.amazonaws.com:8545"
+            ,           chainID: 1337
+
+                }
+,
+			forking: { 
+				url: "https://cloudflare-eth.com/",
+
+			}
+
+		}
+   },
+
+        solidity: "0.8.18",
+};
+
+
+
+
+npx hardhat node --hostname    ec2-35-87-164-14.us-west-2.compute.amazonaws.com
+
+
+npx hardhat console
+
+>await ethers.provider.getBalance("< my local address >")
+
+
+>await ethers.provider.getBalance("<address from etherscan>")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 
+
+
+
+
+
+
+
+pragma solidity ^0.8.9;
+
+// Store a single data point and allow fetching/updating of that datapoint
+contract Hello {
+
+    // data point
+    string public storedData;
+
+    event myEventTest(string eventOutput);
+
+    function set(string memory myText) public {
+        storedData = myText;
+        emit myEventTest(myText);
+    }
+
+    function get() public view returns (string memory) {
+        return storedData;
+    }
+
+}
+
+
+>const contract   await ethers.getContractFactor("Hello")
+>contract.connect(signers[0])
+>contract cd = contract.deploy()
+>contract.set('more')
+>contract.get()
+>await ethers.provider.getBalance(signers[0].address)
+
+
+
+
+
+
+> signers[0].address
+'0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+> const signers2 = await ethers.getSigners();
+> contractD2.connect(signers[0]);
+> await ethers.provider.getBalance(signers[0].address)
+9999983327908310651332n
+> contractD2.set('more')
+> await contractD2.get()
+'more'
+>
+> await ethers.provider.getBalance(signers[0].address)
+9999983078486421584324n
+
+
+
+
+
+
+
+
    27  vi hardhat.config.js
    28  npx hardhat node
   43  npx hardhat node
