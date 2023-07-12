@@ -1,3 +1,22 @@
+1.) setup / configure
+2.) test addresses from ethereum mainnet
+3.) deploy to forked ethereum -using a mainnet address
+4.) deploy a contract to read balance from token 
+- test with mainnet contractaddress , user address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 install notes
 
    3  sudo apt-get update
