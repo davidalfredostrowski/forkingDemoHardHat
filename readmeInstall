@@ -25,21 +25,11 @@ install notes
     6  sudo apt install nodejs build-essential
     7  npm install web3
     8  npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
-    9  npx hardhat
-   10  npx hardhat init
-   11  npx hardhat fork
-   12  npx hardhat test
+npm i @openzeppelin/contracts@4.5.0
+    9  
    13  mkdir forkingDemo
    14  cd forkingDemo/
    15  npx hardhat
-   16  ls
-   17  npx hardhat node
-   18  npx hardhat node --fork https://cloudflare-eth.com/
-   19  ls
-   20  vi hardhat.config.js
-   21  npx hardhat node
-   22  vi hardhat.config.js
-   23  npx hardhat node
    24  vi hardhat.config.js
    25  npx hardhat node --fork https://cloudflare-eth.com/
    26  ls
@@ -185,6 +175,26 @@ contract Hello {
 > await contractD2.get()
 'more'
 >
+
+
+
+
+
+
+
+pragma solidity >=0.7.0 <0.9.0
+
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+
+contract Checker {
+	function check(address _token, address user) view public return
+		return IERCO(_token).balanceOf(user)
+	}
+}
+
+
+
 > await ethers.provider.getBalance(signers[0].address)
 9999983078486421584324n
 
