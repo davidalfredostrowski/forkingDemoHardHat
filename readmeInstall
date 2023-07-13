@@ -4,19 +4,6 @@
 4.) deploy a contract to read balance from token 
 - test with mainnet contractaddress , user address
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 install notes
 
    3  sudo apt-get update
@@ -33,35 +20,7 @@ npm i @openzeppelin/contracts@4.5.0
    24  vi hardhat.config.js
    25  npx hardhat node --fork https://cloudflare-eth.com/
    26  ls
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  3  sudo apt-get update
-    4  curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-    5  sudo bash nodesource_setup.sh
-    6  sudo apt install nodejs build-essential
-    7  npm install web3
-    8  npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
-    9  npx hardhat
-   10  npx hardhat init
-   11  npx hardhat fork
-   12  npx hardhat test
-   13  mkdir forkingDemo
+  13  mkdir forkingDemo
    14  cd forkingDemo/
    15  npx hardhat
    16  ls
@@ -107,30 +66,6 @@ npx hardhat console
 >await ethers.provider.getBalance("<address from etherscan>")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 
-
-
-
-
-
-
-
 pragma solidity ^0.8.9;
 
 // Store a single data point and allow fetching/updating of that datapoint
@@ -151,6 +86,18 @@ contract Hello {
     }
 
 }
+
+
+
+ const signers = await ethers.getSigners();
+>const contract   await ethers.getContractFactory("Hello")
+>contract.connect(signers[0])
+>contract cd = contract.deploy()
+>contract.set('more')
+>contract.get()
+>await ethers.provider.getBalance(signers[0].address)
+
+
 
  const signers2 = await ethers.getSigners();
 > contractD2.connect(signers[0]);
