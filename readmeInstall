@@ -105,7 +105,7 @@ contract Hello {
 9999983327908310651332n
 >const contract   await =  ethers.getContractFactor("Hello")
 >contract.connect(signers[0])
->contract cd = contract.deploy()
+>const cd = contract.deploy()
 >contract.set('more')
 >contract.get()
 >await ethers.provider.getBalance(signers[0].address)
