@@ -56,6 +56,7 @@ module.exports = {
 
 
 npx hardhat node --hostname    ec2-35-87-164-14.us-west-2.compute.amazonaws.com
+/forkDemo$ npx hardhat node --hostname localhost
 
 
 npx hardhat console
@@ -87,6 +88,30 @@ contract Hello {
 
 }
 
+ npx hardhat console --network localhost
+Welcome to Node.js v14.21.3.
+Type ".help" for more information.
+>  const signers2 = await ethers.getSigners();
+undefined
+> const contract3 =  await ethers.getContractFactory("Hello")
+undefined
+> const cd2 = await contract.deploy()
+Uncaught ReferenceError: contract is not defined
+    at REPL3:1:25
+> const cd2 = await contract3.deploy()
+Uncaught SyntaxError: Identifier 'cd2' has already been declared
+> const cd3 = await contract3.deploy()
+undefined
+> cd3.set('aaabbbb')
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3248,
+  [Symbol(trigger_async_id_symbol)]: 13,
+  [Symbol(destroyed)]: { destroyed: false }
+}
+> await cd3.get()
+'aaabbbb'
+>
 
 
  const signers = await ethers.getSigners();
