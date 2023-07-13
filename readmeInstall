@@ -90,7 +90,7 @@ contract Hello {
 
 
  const signers = await ethers.getSigners();
->const contract   await ethers.getContractFactory("Hello")
+>const contract =  await ethers.getContractFactory("Hello")
 >contract.connect(signers[0])
 >contract cd = contract.deploy()
 >contract.set('more')
