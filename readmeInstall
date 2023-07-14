@@ -143,3 +143,8 @@ contract Check {
 >const cc = await contract.connect(signers[0])
 >const cd = cc.deploy()
 >await cd.check("0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0","0x29984d1F9055cafB02dcDd53C54B727902E44975")
+
+#NOTE: if you have issues with the console commands it can help to remmove all deployed contracts via the following command (below) and start the process over !
+ubuntu@ip-172-31-52-4:~/forkingDemo/artifacts$ rm -rf *
+
+
