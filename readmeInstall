@@ -6,28 +6,18 @@
 
 install notes
 
-   3  sudo apt-get update
-    4  curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-    5  sudo bash nodesource_setup.sh
-    6  sudo apt install nodejs build-essential
-    7  npm install web3
-    8  npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
+sudo apt-get update
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs build-essential
+npm install web3
+npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 npm i @openzeppelin/contracts@4.5.0
-    9  
-   13  mkdir forkingDemo
-   14  cd forkingDemo/
-   15  npx hardhat
-   24  vi hardhat.config.js
-   25  npx hardhat node --fork https://cloudflare-eth.com/
-   26  ls
-  13  mkdir forkingDemo
-   14  cd forkingDemo/
-   15  npx hardhat
-   16  ls
+mkdir forkingDemo
+cd forkingDemo/
 
-
-hardhat.config
-npx hardhat node --fork https:
+npx hardhat
+vi hardhat.config.js
 
 require("@nomicfoundation/hardhat-toolbox");
 
