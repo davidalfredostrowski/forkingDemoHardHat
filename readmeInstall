@@ -1,7 +1,9 @@
 1.) setup / configure
 2.) test addresses from ethereum mainnet
 3.) deploy to forked ethereum -using a mainnet address
-4.) deploy a contract to read balance from token 
+4.) account balance test
+5.) deploy 'hello world' to your forked mainnet!
+6.) deploy a contract to read balance from ERC20 token 
 - test with mainnet contractaddress , user address
 
 install notes
