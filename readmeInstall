@@ -118,25 +118,6 @@ Promise {
 ### connect to a contract from forked mainnet..
 
 
->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  cd = contract.deploy()
 >contract.set('more')
 >contract.get()
@@ -169,30 +150,6 @@ undefined
 > const contract =  await ethers.getContractFactory("Hello")
 undefined
 > const cc = contract.connect(signer)
-undefined
-> cc.set('a')
-Uncaught TypeError: cc.set is not a function
-> const cd = await contract.deploy()
-undefined
-> const cc = cd.connect(signer)
-Uncaught SyntaxError: Identifier 'cc' has already been declared
-> const cc2 = cd.connect(signer)
-
-
-
-
-
-> signers[0].address
-'0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
-> const signers2 = await ethers.getSigners();
-> contractD2.connect(signers[0]);
-> await ethers.provider.getBalance(signers[0].address)
-9999983327908310651332n
-> contractD2.set('more')
-> await contractD2.get()
-'more'
->
-
 
 
 
