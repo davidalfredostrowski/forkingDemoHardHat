@@ -155,6 +155,28 @@ Promise {
 >contract.get()
 >await ethers.provider.getBalance(signers[0].address)
 
+ npx hardhat console --network localhost
+Welcome to Node.js v14.21.3.
+Type ".help" for more information.
+> const address = "0x71A3Bfe8f5d56F42B39F3f218edCac6311B2f38f"
+undefined
+> const bal    =  await ethers.provider.getBalance(address)
+undefined
+> bal
+845736200360204231223n
+> const signer  = ethers.provider.getSigner(address)
+undefined
+> const contract =  await ethers.getContractFactory("Hello")
+undefined
+> const cc = contract.connect(signer)
+undefined
+> cc.set('a')
+Uncaught TypeError: cc.set is not a function
+> const cd = await contract.deploy()
+undefined
+> const cc = cd.connect(signer)
+Uncaught SyntaxError: Identifier 'cc' has already been declared
+> const cc2 = cd.connect(signer)
 
 
 
