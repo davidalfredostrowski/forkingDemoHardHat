@@ -61,8 +61,14 @@ npx hardhat console --network localhost
 
 >await ethers.provider.getBalance("< my local address >")
 
-
 >await ethers.provider.getBalance("<address from etherscan>")
+e.g.
+> await ethers.provider.getBalance("0x71A3Bfe8f5d56F42B39F3f218edCac6311B2f38f")
+845744216400112038531n
+
+check against : 
+https://etherscan.io/address/0x71a3bfe8f5d56f42b39f3f218edcac6311b2f38f
+
 
 
 pragma solidity ^0.8.9;
@@ -86,7 +92,7 @@ contract Hello {
 
 }
 
- npx hardhat console --network localhost
+npx hardhat console --network localhost
 Welcome to Node.js v14.21.3.
 Type ".help" for more information.
 >  const signers2 = await ethers.getSigners();
