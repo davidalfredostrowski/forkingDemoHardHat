@@ -142,3 +142,4 @@ contract Check {
 >const contract =  await ethers.getContractFactory("Check")
 >const cc = await contract.connect(signers[0])
 >const cd = cc.deploy()
+>await cd.check("0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0","0x29984d1F9055cafB02dcDd53C54B727902E44975")
