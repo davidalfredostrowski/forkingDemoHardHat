@@ -136,10 +136,9 @@ contract Check {
         }
 }
 
-const signers2 = await ethers.getSigners();
-> contractD2.connect(signers[0]);
+> const signers2 = await ethers.getSigners();
 > await ethers.provider.getBalance(signers[0].address)
 9999983327908310651332n
->const contract   await =  ethers.getContractFactor("Hello")
->contract.connect(signers[0])
->const cd = contract.deploy()
+>const contract =  await ethers.getContractFactory("Check")
+>const cc = await contract.connect(signers[0])
+>const cd = cc.deploy()
