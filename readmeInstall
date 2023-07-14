@@ -125,61 +125,21 @@ Promise {
 
 
 
- const signers2 = await ethers.getSigners();
+# under Check.sol
+pragma solidity ^0.8.9;
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+
+contract Check {
+        function check(address _token, address user) view public returns(uint256){
+                return IERC20(_token).balanceOf(user);
+        }
+}
+
+const signers2 = await ethers.getSigners();
 > contractD2.connect(signers[0]);
 > await ethers.provider.getBalance(signers[0].address)
 9999983327908310651332n
 >const contract   await =  ethers.getContractFactor("Hello")
 >contract.connect(signers[0])
 >const cd = contract.deploy()
->contract.set('more')
->contract.get()
->await ethers.provider.getBalance(signers[0].address)
-
- npx hardhat console --network localhost
-Welcome to Node.js v14.21.3.
-Type ".help" for more information.
-> const address = "0x71A3Bfe8f5d56F42B39F3f218edCac6311B2f38f"
-undefined
-> const bal    =  await ethers.provider.getBalance(address)
-undefined
-> bal
-845736200360204231223n
-> const signer  = ethers.provider.getSigner(address)
-undefined
-> const contract =  await ethers.getContractFactory("Hello")
-undefined
-> const cc = contract.connect(signer)
-
-
-
-
-
-
-pragma solidity >=0.7.0 <0.9.0
-
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
-
-contract Checker {
-	function check(address _token, address user) view public return
-		return IERCO(_token).balanceOf(user)
-	}
-}
-
-
-
-> await ethers.provider.getBalance(signers[0].address)
-9999983078486421584324n
-
-
-
-
-
-
-
-
-   27  vi hardhat.config.js
-   28  npx hardhat node
-  43  npx hardhat node
-   44  npx hardhat node --hostname    ec2-35-87-164-14.us-west-2.compute.amazonaws.com
