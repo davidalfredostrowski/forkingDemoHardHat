@@ -152,6 +152,56 @@ undefined
 > await deployedContract.check("0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0","0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908")
 3741061425554686054861919744n
 
+
+
+# notes for 'remix' version 
+
+
+hardhat.config.js
+
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+        networks: {
+                hardhat: {
+                localhost: {
+                        url: "http://ec2-35-84-0-196.us-west-2.compute.amazonaws.com:8545"
+            ,           chainID: 31337
+
+                }
+,
+                        forking: {
+                                url: "https://cloudflare-eth.com/",
+
+                        }
+
+                }
+   },
+
+        solidity: "0.8.18",
+};
+
+
+
+ npx hardhat node --hostname <aws dns> 
+
+(e.g.)  ec2-35-84-0-196.us-west-2.compute.amazonaws.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #NOTE: if you have issues with the console commands it can help to remmove all deployed contracts via the following command (below) and start the process over !
 ubuntu@ip-172-31-52-4:~/forkingDemo/artifacts$ rm -rf *
 
